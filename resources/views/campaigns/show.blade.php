@@ -1,0 +1,1 @@
+<div>{{ $campaign->body }}</div>

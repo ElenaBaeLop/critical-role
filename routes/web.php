@@ -10,6 +10,10 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('joinCampaign', [CampaignController::class, 'index']);
+Route::get('campaigns/{campaign:slug}', [CampaignController::class, 'show']);
+
+
+
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
