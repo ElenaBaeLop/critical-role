@@ -24,12 +24,12 @@ class CampaignFactory extends Factory
             'slug' => $this->faker->slug(),
             'name' => $this->faker->sentence(),
             'total_players' => $this->faker->numberBetween(1, 10),
-            'session_frequency' => $this->faker->randomElement(['weekly', 'bi-weekly', 'monthly']),
-            'language' => $this->faker->randomElement(['english', 'spanish', 'french']),
+            'session_frequency' => $this->faker->randomElement(['once','weekly', 'monthly','sun','mon','tue','wed','thu','fri','sat']),
+            'language' => $this->faker->randomElement(['en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'zh', 'ja', 'ko']),
             'searching_for_players' => $this->faker->boolean(),
             'discord_server_tag' => $this->faker->word(),
             'excerpt' => $this->faker->paragraph(2),
-            'body' => $this->faker->paragraph(6),
+            'body' => $this->faker->paragraph(10),
         ];
     }
 }
