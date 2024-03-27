@@ -7,11 +7,20 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
+    /**
+     * Display the registration form.
+     *
+     * @return [type] Redirect to register.create view
+     */
     public function create()
     {
         return view('register.create');
     }
-
+    /**
+     * Store a new user in the database.
+     *
+     * @return [type] Redirect to home view
+     */
     public function store()
     {
         $attributes = request()->validate([

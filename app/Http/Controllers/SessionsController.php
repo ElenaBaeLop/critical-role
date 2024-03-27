@@ -7,11 +7,20 @@ use Illuminate\Validation\ValidationException;
 
 class SessionsController extends Controller
 {
+    /**
+     * Display the login form.
+     *
+     * @return [type] Redirect to sessions.create view
+     */
     public function create()
     {
         return view('sessions.create');
     }
-
+    /**
+     * Store a new session in the database.
+     *
+     * @return [type] Redirect to home view
+     */
     public function store()
     {
         $attributes = request()->validate([
@@ -29,7 +38,11 @@ class SessionsController extends Controller
 
         return redirect('/')->with('success', 'Welcome Back!');
     }
-
+    /**
+     * Destroy the session in the database.
+     *
+     * @return [type] Redirect to home view
+     */
     public function destroy()
     {
         auth()->logout();

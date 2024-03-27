@@ -4,7 +4,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Critical Role</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
+    <!--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">-->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -21,11 +21,6 @@
 {{ $slot }}
 
 
-<!--Mensaje de success si registo se ha hecho/ Eliminar este mensaje con javaScript despues de 3 sec-->
-@if(session()->has('success'))
-    <div class="success" id="success">
-        <p>{{session('success')}}</p>
-    </div>
-@endif
+<x-success />
 
 </body>

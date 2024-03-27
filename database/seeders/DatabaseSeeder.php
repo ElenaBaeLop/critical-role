@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        for ($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             Campaign::factory()->create([
                 'user_id' => $user->id,
                 'category_id' => Category::all()->random()->id
