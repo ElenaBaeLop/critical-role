@@ -1,5 +1,9 @@
 <x-layout>
     <x-header />
+    @if(Auth::user()->id == $campaign->user_id)
+        <x-campaign-delete-form :campaign="$campaign"/>
+        <x-campaign-update-form :campaign="$campaign"/>
+    @endif
     <section>
         <h1>{{ $campaign->name }}</h1>
         <label for="">Playing</label>
@@ -10,8 +14,12 @@
         <div>{{ $campaign->session_frequency }}</div>
         <label for="">Language</label>
         <div>{{ $campaign->language }}</div>
-        <label for="">New players</label>
-        <div>{{ $campaign->searching_for_players }}</div>
+        <label for="">Searching for new players</label>
+        @if($campaign->searching_for_players == 1)
+            <div>Yes</div>
+        @else
+            <div>No</div>
+        @endif
         <label for="">Info</label>
         <div>{{ $campaign->body }}
     </section>

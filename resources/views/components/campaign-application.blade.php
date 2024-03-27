@@ -5,7 +5,7 @@
 
     <div>
         <header class="mb-4">
-            <h3 class="font-bold">{{ $application->author->username }}</h3>
+            <a href="/profile/{{ $application->author->username }}" class="">{{ $application->author->username }}</a>
 
             <p class="text-xs">
                 Posted
@@ -17,18 +17,17 @@
             {{ $application->body }}
         </p>
     </div>
-    {{ $application->campaign->user_id }}
     @if($application->user_id == auth()->id() || $application->campaign->user_id == auth()->id() )
         <form method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}">
             @csrf
             @method('DELETE')
-            <input type="submit" value="Delete" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">
+            <input type="submit" value="Delete" class="">
         </form>
     @endif
     @if($application->campaign->user_id == auth()->id() )
         <form method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/accept">
             @csrf
-            <input type="submit" value="Accept" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+            <input type="submit" value="Accept" class="">
         </form>
     @endif
 </article>

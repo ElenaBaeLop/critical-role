@@ -38,8 +38,9 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
-            'discord_tag' => $this->faker->word(),
+            'discord_tag' => $this->faker->unique()->regexify('/^.{3,32}#[0-9]{4}$/'),
             'biography' => $this->faker->paragraph(),
+            'game_likes' => $this->faker->paragraph(),
         ];
     }
 

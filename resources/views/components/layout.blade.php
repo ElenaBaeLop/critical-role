@@ -13,6 +13,7 @@
         src="https://kit.fontawesome.com/f0d12fad38.js"
         crossorigin="anonymous"
     ></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -22,5 +23,6 @@
 
 
 <x-success />
+<x-error />
 
 </body>

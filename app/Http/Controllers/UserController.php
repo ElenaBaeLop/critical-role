@@ -152,4 +152,26 @@ class UserController extends Controller
             }
         }
     }
+    /**
+     * Update user game_likes
+     *
+     * Will obtain the form data, and will change the game_likes to a new one
+     *
+     * @param User $user
+     * @param Request $request
+     *
+     * @return [type] Redirect to profile page
+     */
+    public function updateLikes(User $user, Request $request)
+    {
+        $request->validate([
+            'game_likes' => 'required|string'
+        ]);
+
+        $user->update([
+            'game_likes' => trim($request->input('game_likes'))
+        ]);
+
+        return redirect('/profile/'.Auth::user()->username)->with('success', 'Game likes updated successfully');
+    }
 }

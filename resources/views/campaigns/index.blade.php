@@ -12,7 +12,6 @@
             border: 1px solid #ccc;
             width: 200px; /* Ajusta el ancho según tu diseño */
             padding: 10px;
-            display: none;
         }
         .prueba{
             border: solid 1px black;
@@ -22,9 +21,14 @@
     <h1>BUSQUEDA</h1>
     <form action="/join-campaign" method="GET" id="search_campaign_form">
         <div class="chosen-choices" id="chosen-choices">
+            <label for="search_campaign">Category</label>
             <input type="text" placeholder="Search" id="search_campaign">
         </div>
-        <label for="">Language</label>
+        <div class="" id="">
+            <label for="">Campaign name</label>
+            <input type="text" name="name" placeholder="Search" id="">
+        </div>
+        <label for="language">Language</label>
         <select name="language" id="">
             <option value="">All</option>
             <option value="en">English</option>
@@ -96,30 +100,34 @@
 
     <h1>LISTADO</h1>
     <a href="/join-campaign">-----------Mostrar todo----------</a>
-    @foreach($campaigns as $campaign)
-        <div class="prueba">
-            <a href="/profile/{{ $campaign->author->username }}">{{ $campaign->author->username }}</a>
-            <div>
-                <a href="/campaigns/{{ $campaign->slug }}">{{ $campaign->name }}</a>
-                <p>{{ $campaign->excerpt }}</p>
+    @if($campaigns->count())
+        @foreach($campaigns as $campaign)
+            <div class="prueba">
+                <a href="/profile/{{ $campaign->author->username }}">{{ $campaign->author->username }}</a>
+                <div>
+                    <a href="/campaigns/{{ $campaign->slug }}">{{ $campaign->name }}</a>
+                    <p>{{ $campaign->excerpt }}</p>
+                </div>
+                <div class="">
+                    <a href="/campaigns/{{ $campaign->slug }}">Read More!!!!!!!!!!!!!!!!!!!</a>
+                </div>
+                <p class="text-xs">
+                    Created
+                    <time>{{ $campaign->created_at->format('F j, Y') }}</time>
+                </p>
+                {{ $campaign->language }}/?????/////
+                {{ $campaign->session_frequency }}/////////
+                {{ $campaign->category->name }}///!!!!!///
+                {{ $campaign->searching_for_players }}
+                <span>------------------</span>
             </div>
-            <div class="">
-                <a href="/campaigns/{{ $campaign->slug }}">Read More!!!!!!!!!!!!!!!!!!!</a>
-            </div>
-            <p class="text-xs">
-                Created
-                <time>{{ $campaign->created_at->format('F j, Y') }}</time>
-            </p>
-            {{ $campaign->language }}/?????/////
-            {{ $campaign->session_frequency }}/////////
-            {{ $campaign->category->name }}///!!!!!///
-            {{ $campaign->searching_for_players }}
-            <span>------------------</span>
-        </div>
-    @endforeach
+        @endforeach
 
-    {{$campaigns->links()}}
+        {{$campaigns->links()}}
+    @else
+        <p>No campaigns found</p>
+    @endif
+
 </x-layout>
 
-<script src="js/jquery-3.7.1.min.js"></script>
 <script src="{{ asset('js/category-dropdown.js') }}"></script>

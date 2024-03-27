@@ -2,6 +2,7 @@
 
     <div class="">
         <div>
+            <a href="/">Home page</a>
             <a href="/create-campaign">Create campaign</a>
             <a href="/join-campaign">Join campaign</a>
         </div>

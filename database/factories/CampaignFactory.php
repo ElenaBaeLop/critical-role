@@ -27,7 +27,7 @@ class CampaignFactory extends Factory
             'session_frequency' => $this->faker->randomElement(['once','weekly', 'monthly','sun','mon','tue','wed','thu','fri','sat']),
             'language' => $this->faker->randomElement(['en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'zh', 'ja', 'ko']),
             'searching_for_players' => $this->faker->boolean(),
-            'discord_server_tag' => $this->faker->word(),
+            'discord_server_tag' => $this->faker->regexify('/^.{3,32}#[0-9]{4}$/'),
             'excerpt' => $this->faker->paragraph(2),
             'body' => $this->faker->paragraph(10),
         ];

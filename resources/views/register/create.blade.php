@@ -1,4 +1,5 @@
 <x-layout>
+    <x-header />
     <section class= "wrapper">
         <h1 class="wrapper__title">Register</h1>
         <form action="/register" method="POST" class="wrapper__form" id="register-form">
