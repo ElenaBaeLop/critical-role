@@ -111,7 +111,7 @@ class CampaignController extends Controller
         }
 
         $excerpt = substr($request->input('body'), 0, 100);
-        $slug = strtolower(str_replace(' ', '-', $request->input('name'))).now();
+        $slug = strtolower(str_replace(' ', '-', $request->input('name'))).now()->timestamp;
 
         Campaign::create([
             'name' => $request->input('name'),

@@ -3,6 +3,7 @@
     @auth
         @if($user->username == Auth::user()->username)
             <a href="/profile/{{ Auth::user()->username }}/edit">Editar perfil</a>
+            <a href="/profile/{{ Auth::user()->username }}/notifications">Notificaciones</a>
         @endif
     @endauth
     PERRRRRFIL
@@ -45,11 +46,22 @@
                         Created
                         <time>{{ $campaign->created_at->format('F j, Y, g:i a') }}</time>
                     </p>
-                    @if(Auth::user()->id == $campaign->user_id)
-                        <x-campaign-delete-form :campaign="$campaign"/>
-                        <x-campaign-update-form :campaign="$campaign"/>
-                    @endif
+                    @auth
+                        @if(Auth::user()->id == $campaign->user_id)
+                            <x-campaign-delete-form :campaign="$campaign"/>
+                            <x-campaign-update-form :campaign="$campaign"/>
+                        @endif
+                    @endauth
                 </div>
+            @endforeach
+        </div>
+    @endif
+
+    @if($user->applications->count())
+        Applications currently active
+        <div>
+            @foreach($user->applications as $application)
+                <x-campaign-application-profile :application="$application"/>
             @endforeach
         </div>
     @endif

@@ -34,6 +34,7 @@ class UserController extends Controller
             'user' => $user
         ]);
     }
+
     /**
      * Update user bio
      *

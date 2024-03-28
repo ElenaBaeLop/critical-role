@@ -1,9 +1,11 @@
 <x-layout>
     <x-header />
-    @if(Auth::user()->id == $campaign->user_id)
-        <x-campaign-delete-form :campaign="$campaign"/>
-        <x-campaign-update-form :campaign="$campaign"/>
-    @endif
+    @auth
+        @if(Auth::user()->id == $campaign->user_id)
+            <x-campaign-delete-form :campaign="$campaign"/>
+            <x-campaign-update-form :campaign="$campaign"/>
+        @endif
+    @endauth
     <section>
         <h1>{{ $campaign->name }}</h1>
         <label for="">Playing</label>

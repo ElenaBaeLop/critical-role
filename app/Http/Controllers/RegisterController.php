@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Notifications\UpdateProfile;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -31,6 +32,8 @@ class RegisterController extends Controller
         ]);
 
         auth()->login(User::create($attributes));
+        //Notificarles de que actualicen su perfil
+        auth()->user()->notify(new UpdateProfile());
 
         return redirect('/')->with('success', 'Your account has been created.');
     }

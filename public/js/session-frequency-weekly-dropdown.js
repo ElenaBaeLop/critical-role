@@ -1,4 +1,4 @@
-    $('input[name=session_frequency]:radio').change(function() {
+$('input[name=session_frequency]:radio').change(function() {
         if ($('#session_frequency_weekly').is(":checked")){
             $('#session_frequency_days').show();
         }else {
@@ -9,4 +9,3 @@
     if ($('#session_frequency_weekly').is(":checked")){
         $('#session_frequency_days').show();
     }
-

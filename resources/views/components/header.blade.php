@@ -21,7 +21,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="/profile/{{ Auth::user()->username }}">Perfil</a>
-                    <a href="">Notificaciones</a>
+                    <a href="/profile/{{ Auth::user()->username }}/notifications">Notificaciones</a>
                     <form action="/logout" method="POST" class="header__options__button">
                         @csrf
                         <button type="submit" class="header__options__button__logout">Log Out</button>
