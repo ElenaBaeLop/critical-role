@@ -18,11 +18,11 @@
         </p>
     </div>
     @if($application->user_id == auth()->id() || $application->campaign->user_id == auth()->id() )
-        <form method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
+        <form id="deleteForm" method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
             @csrf
             @method('DELETE')
-            <input type="submit" value="Delete" class="">
         </form>
+        <button id="deleteBtn" class="">Delete</button>
     @endif
     @if($application->campaign->user_id == auth()->id() )
         <form method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/accept">
@@ -31,3 +31,4 @@
         </form>
     @endif
 </article>
+<x-confirm-delete />
