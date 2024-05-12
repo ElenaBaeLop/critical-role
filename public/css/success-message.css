@@ -1,0 +1,27 @@
+/*------------Success-message-----------*/
+.success {
+    color: #F9EBC4;
+    background-color: #D22636;
+    padding-top: 2px;
+    padding-right: 4px;
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    justify-content: center;
+    border-radius: 5px; }
+.success p {
+    margin-left: 3.5px; }
+
+/*------------Error-message-----------*/
+.error {
+    color: #F9EBC4;
+    background-color: #D22636;
+    padding-top: 2px;
+    padding-right: 4px;
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    justify-content: center;
+    border-radius: 5px; }
+.error p {
+    margin-left: 3.5px; }

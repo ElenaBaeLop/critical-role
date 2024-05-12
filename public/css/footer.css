@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color:#F9EBC4;
+    color: #778B94;
+    padding: 20px 0;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info strong {
+    font-size: 1.2em;
+}
+
+.watermark {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-brands {
+    color: #778B94;
+    margin: 15px;
+}

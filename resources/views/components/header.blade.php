@@ -1,74 +1,6 @@
-<style>
-    /* Estilos para el encabezado */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #f0f0f0;
-    }
+<link rel="stylesheet" href="/css/header.css">
 
-    /* Estilos para los enlaces */
-    header a {
-        text-decoration: none;
-        color: #333;
-        margin-right: 20px;
-    }
-
-    /* Estilos para el botón de registro y inicio de sesión */
-    header .guest-links {
-        display: flex;
-    }
-
-    /* Estilos para el botón de perfil del usuario */
-    header .dropdown {
-        position: relative;
-    }
-
-    /* Estilos para el botón de perfil del usuario */
-    header .dropdown-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* Estilos para el menú desplegable del usuario */
-    header .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #fff;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 10px;
-        display: none;
-    }
-
-    /* Estilos para los enlaces dentro del menú desplegable */
-    header .dropdown-menu a {
-        display: block;
-        padding: 8px 12px;
-        color: #333;
-        text-decoration: none;
-    }
-
-    /* Estilos para el botón de cerrar sesión */
-    header .dropdown-menu form {
-        margin-top: 10px;
-    }
-
-    /* Estilos para el botón de cerrar sesión */
-    header .dropdown-menu button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #333;
-        padding: 8px 12px;
-        text-decoration: none;
-    }
-
-</style>
-
-<header class="">
+<header class="header">
         <div>
             <a href="/">Home page</a>
             <a href="/create-campaign">Create campaign</a>
@@ -85,11 +17,12 @@
         @auth
             <div class="dropdown">
                 <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                    <i class="arrow fa-solid fa-caret-down"></i>
                     {{ Auth::user()->name }}
                 </button>
                 <div class="dropdown-menu" style="display: none">
-                    <a class="dropdown-profile" href="/profile/{{ Auth::user()->username }}">Perfil</a>
-                    <a class="dropdown-notification" href="/profile/{{ Auth::user()->username }}/notifications">Notificaciones</a>
+                    <a class="dropdown-profile" href="/profile/{{ Auth::user()->username }}">Profile</a>
+                    <a class="dropdown-notification" href="/profile/{{ Auth::user()->username }}/notifications">Notifications</a>
                     <form action="/logout" method="POST" >
                         @csrf
                         <button type="submit" >Log Out</button>
@@ -108,6 +41,7 @@
 
                 $(".dropdown-toggle").click(function(){
                     $(".dropdown-menu").toggle();
+                    $(".arrow").toggleClass("fa-caret-down fa-caret-up");
                 });
 
                 // Ocultar el menú desplegable cuando se hace clic en cualquier parte de la pantalla

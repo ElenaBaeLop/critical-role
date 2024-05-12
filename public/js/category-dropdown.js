@@ -89,7 +89,7 @@ function pintarLista(categorias) {
             });
             $('#search_campaign_form').append(inputHidden);
             //Agregar el elemento seleccionado al formulario para visualizarlo
-            let div = $('<div>').text(elemento.name).addClass('search-choice').attr('id', elemento.name + '_' + elemento.id);
+            let div = $('<div>').text(elemento.name).addClass('search-choice').attr('id', elemento.name + '_' + elemento.id).append('          <i class="fa-solid fa-delete-left"></i>');
             $('#chosen-choices').append(div);
 
             // Eliminar el elemento seleccionado del array respuestaAjax para que no vuelva a salir como opcion
