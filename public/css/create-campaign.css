@@ -1,0 +1,57 @@
+#session_frequency_days{
+    display: none;
+    /*position: absolute;*/
+    top: 30px;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100px;
+    padding: 10px;
+}
+.create-campaign-wrapper{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.create-campaign{
+    background-image: url("/images/Fondo_1.png");
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 330px;
+}
+.create-campaign label{
+    font-weight: bold;
+    color: #F9EBC4;
+    margin-bottom: 10px;
+}
+.create-campaign input[type="text"], input[type="number"], input[type="submit"], textarea, select{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+.frequency-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.frequency-input input{
+    margin: 0 10px;
+}
+.frequency-input label{
+    margin: 10px;
+}
+.frequency-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

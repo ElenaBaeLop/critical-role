@@ -23,7 +23,9 @@
     background-color: #D22636;
     padding: 30px;
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
+    background-image: url("/images/Fondo_1.png");
+    min-width: 290px;
 }
 .search h2{
     color: #F9EBC4;

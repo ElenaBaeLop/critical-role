@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/css/header.css">
 
 <header class="header">
-        <div>
-            <a href="/">Home page</a>
+        <div class="links-wrapper">
+            <a href="/"><img src="/images/Logo.png" class="logo-header"></a>
             <a href="/create-campaign">Create campaign</a>
             <a href="/join-campaign">Join campaign</a>
         </div>

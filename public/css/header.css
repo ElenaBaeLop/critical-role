@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
+    padding: 20px 10px;
+    border-bottom: 1px solid #fae2a3;
 }
 
 
@@ -82,4 +83,13 @@
     padding: 8px 12px;
     text-decoration: none;
     color: #778B94;
+}
+.logo-header{
+    width: 60px;
+    height: 60px;
+}
+.links-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
