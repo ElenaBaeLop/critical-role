@@ -26,8 +26,8 @@ body{
 
 }
 .secondary-btn{
-    background:#F9EBC4;
-    color: #778B94;
+    background:#D5732A;
+    color: #F9EBC4;
     transition: all 0.25s ease-out;
     width: 90px;
 }
