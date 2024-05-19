@@ -15,20 +15,31 @@
 
 .search{
     display: flex;
-    padding: 30px 50px;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
 }
 .search-wrapper{
-    background-color: #D22636;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #F9EBC4;
     padding: 30px;
-    border-radius: 10px;
-    width: 60%;
-    background-image: url("/images/Fondo_1.png");
-    min-width: 290px;
+    width: 30%;
+    height: 100%;
+    background-image: url("/images/Fondo_4.png");
+    margin: 20px;
+    border-radius: 5px;
 }
-.search h2{
-    color: #F9EBC4;
+#search_campaign_form{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+.search-wrapper h2{
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    color: #636363;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -38,16 +49,15 @@
     display: flex;
     flex-direction: column;
     margin: 10px 0;
-    width: 15%;
 }
 .search-div label{
    font-weight: bold;
-    color: #F9EBC4;
+    color: #636363;
     margin-bottom: 10px;
 }
 .search-div p{
     margin:0;
-    color: #F9EBC4;
+    color: #636363;
     font-weight: bold;
 }
 .search-div-row{
@@ -57,7 +67,7 @@
 }
 .search-div-row label{
     font-weight: bold;
-    color: #F9EBC4;
+    color: #636363;
 }
 .text-input{
     width: 200px;
@@ -70,7 +80,10 @@
     color: #F9EBC4;
     padding: 5px;
     background-color: #d55e6b;
-    width: 195px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1px 0;
 }
 .search-choice:hover{
     position: relative;
@@ -95,8 +108,8 @@
 }
 .search-result-wrapper{
     padding: 30px;
-    border-radius: 10px;
     width: 80%;
+    background-color: #F6F5F1;
 }
 .search-result-header{
     display: flex;
@@ -105,8 +118,132 @@
     align-items: center;
     margin: 20px 0;
 }
+/*-------------------------------------------------------*/
 .campaign{
-    border-top: dotted 1px #d55e6b;
     padding: 20px;
+    margin: 30px 0;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
 }
+.campaign-img-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+    margin: 0 20px;
+}
+.campaign-img{
+
+}
+.campaign-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+}
+.campaign-info > * {
+    margin: 5px;
+}
+.campaign-excerpt{
+    white-space: pre-wrap; /* Preserva los saltos de línea y los espacios */
+    overflow-wrap: break-word; /* Permite que las palabras largas se rompan y ajusten al contenedor */
+    word-wrap: break-word; /* Compatibilidad con navegadores más antiguos */
+    max-width: 100%;
+}
+/*----------------------*/
+.facts-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 70%;
+    height: 100%;
+    justify-content: space-between;
+}
+.facts-img-wrapper{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+.facts-img{
+    width: 100%;
+    border-radius: 5px;
+}
+.facts-text-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333333;
+    color: white;
+    padding: 30px;
+}
+.did-you-know{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 35px;
+}
+.did-you-know h4{
+    color: #d55e6b;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin:0 0 30px 0;
+}
+
+
+
+@media (max-width: 1020px) {
+    .search {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .facts-wrapper {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .facts-text-wrapper {
+
+        flex-direction: column;
+        padding: 20px;
+        margin: 5px 0;
+    }
+
+    .search-result-wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .campaign {
+        flex-direction: column;
+    }
+
+    .campaign-img-wrapper {
+        width: 100%;
+    }
+
+    .campaign-info {
+        width: 100%;
+    }
+    .search-result-header{
+        flex-direction: column;
+    }
+}
+
 

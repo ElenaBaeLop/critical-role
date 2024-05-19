@@ -1,10 +1,11 @@
 .header{
-    background:#778B94;
+    background:#333333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
-    border-bottom: 1px solid #717f88;
+    padding: 10px 10px;
+    border-bottom: 1px solid #8e8d8d;
+    width: 100%;
 }
 
 
@@ -16,7 +17,7 @@
     font-weight: bold;
 }
 .header a:hover {
-    color: #d55e6b;
+    color: #778B94;
 }
 
 /* Estilos para el botón de perfil del usuario */

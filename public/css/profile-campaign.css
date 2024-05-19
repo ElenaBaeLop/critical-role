@@ -1,0 +1,104 @@
+.campaign-profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.campaign-profile-btns {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-top: 20px;
+}
+.input-btn{
+    background-color: #F9EBC4;
+    color: black;
+}
+/*--------------------------*/
+.campaign{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f6f5f1;
+    border-radius: 5px;
+    max-width: 50%;
+}
+.campaign h1{
+    color: #778B94;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.campaign label{
+    color: #778B94;
+    font-size: 15px;
+    padding: 10px;
+}
+.campaign div{
+    align-items: center;
+    padding: 10px;
+    color: #454545;
+    white-space: pre-wrap; /* Preserva los saltos de línea y los espacios */
+    overflow-wrap: break-word; /* Permite que las palabras largas se rompan y ajusten al contenedor */
+    word-wrap: break-word; /* Compatibilidad con navegadores más antiguos */
+    max-width: 100%;
+}
+/*--------------------------*/
+.applications-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border-top: 1px solid #F9EBC4;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #778B94;
+}
+.applications{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+/*--------------------------*/
+.application{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #F9EBC4;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+.header-post{
+    display: flex;
+    flex-direction: column;
+}
+.text-application-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.application-body{
+    /* white-space: pre-wrap;  Preserva los saltos de línea y los espacios */
+    overflow-wrap: break-word; /* Permite que las palabras largas se rompan y ajusten al contenedor */
+    word-wrap: break-word; /* Compatibilidad con navegadores más antiguos */
+    max-width: 100%;
+}
+.btns-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: end;
+    width: 20%;
+}

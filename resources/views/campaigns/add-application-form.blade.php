@@ -4,20 +4,14 @@
                 <form method="POST" action="/campaigns/{{$campaign->slug}}/applications">
                     @csrf
 
-                    <header class="flex items-center">
-                        <img src="https://i.pravatar.cc/60?u={{ auth()->id() }}"
-                             alt=""
-                             width="40"
-                             height="40"
-                             class="">
-
-                        <h2 class="ml-4">Want to join this campaign?</h2>
+                    <header class="">
+                        <h2 class="tertiary-title">Want to join this campaign?</h2>
                     </header>
 
-                    <div class="mt-6">
+                    <div class="">
                         <textarea
                             name="body"
-                            class=""
+                            class="textarea"
                             rows="5"
                             placeholder="Leave a brief description about yourself and tell us why you would like to join this campaign!"
                             required></textarea>
@@ -28,16 +22,16 @@
                     </div>
 
                     <div class="">
-                        <input type="submit" value="Submit" class="">
+                        <input type="submit" value="Submit" class="btn tertiary-btn">
                     </div>
                 </form>
         @elseif(Auth::check() && !Auth::user()->discord_tag)
-            <p>In order to apply to a campaign you need to <a href="/profile/{{ Auth::user()->username }}/edit">update your discord tag</a></p>
-        @else
-            <p class="font-semibold">
-                <a href="/register" class="hover:underline">Register</a> or
-                <a href="/login" class="hover:underline">log in</a> to submit an application.
-            </p>
+            <p class="tiny-text">In order to apply to a campaign you need to <a href="/profile/{{ Auth::user()->username }}/edit">update your discord tag</a></p>
         @endif
     @endif
+@else
+    <p class="tiny-text">
+        <a href="/register" class="hover:underline">Register</a> or
+        <a href="/login" class="hover:underline">log in</a> to submit an application.
+    </p>
 @endauth

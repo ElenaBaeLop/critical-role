@@ -7,16 +7,16 @@
         </div>
         <article class="campaings-wrapper">
             <div class="logos_wrapper">
-                <img class="mini-logo" src="/images/pathfinder_logo.svg.png" alt="Pathfinder logo">
-                <img class="mini-logo" src="/images/Logo_Call_of_Cthulhu.png" alt="Call of Cthulhu logo">
-                <img class="mini-logo" src="/images/LogoAnima.png" alt="Anima logo">
-                <img class="mini-logo" src="/images/Vampire_The_Masquerade_logo_V5.png" alt="Vampire the masquerade logo">
+                <img class="mini-logo" src="/images/pathfinder_logo.png" alt="Pathfinder logo">
+                <img class="mini-logo" src="/images/Call_logo.png" alt="Call of Cthulhu logo">
+                <img class="mini-logo" src="/images/Anima_logo.png" alt="Anima logo">
+                <img class="mini-logo" src="/images/Vampire_logo.png" alt="Vampire the masquerade logo">
             </div>
             <p class="text">JOIN OVER TEN MILLION PLAYERS AND DMS PLAYING DUNGEONS AND DRAGONS (AND HUNDREDS OF OTHER SYSTEMS) ONLINE</p>
             @auth
-                <a class="btn primary-btn" href="/join-campaign">Join campaign</a>
+                <a class="btn tertiary-btn" href="/join-campaign">Join campaign</a>
             @else
-                <a class="btn primary-btn" href="/register">Create free account</a>
+                <a class="btn tertiary-btn" href="/register">Create free account</a>
             @endauth
         </article>
         <article class="community-wrapper">
@@ -25,9 +25,9 @@
                 <h3 class="title">Community</h3>
                 <p class="text">Find people to complete your party or start with a set of new players. You can even find a game already in progress. Everything is possible thanks to our huge and incredible community. When you find them, it's easy to play and connect through Discord.</p>
                 @auth
-                    <a class="btn primary-btn" href="/join-campaign">Join campaign</a>
+                    <a class="btn tertiary-btn" href="/join-campaign">Join campaign</a>
                 @else
-                    <a class="btn primary-btn" href="/register">Create free account</a>
+                    <a class="btn tertiary-btn" href="/register">Create free account</a>
                 @endauth
             </div>
         </article>

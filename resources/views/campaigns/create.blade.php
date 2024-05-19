@@ -21,12 +21,19 @@
             <div class="frequency-wrapper">
                 <label for="session_frequency" class="">How often will the sessions be held?</label>
                 <div class="frequency-input">
-                    <label for="session_frequency_once">Once</label>
-                    <input type="radio" name="session_frequency" id="session_frequency_once" value="once">
-                    <label for="session_frequency_monthly">Monthly</label>
-                    <input type="radio" name="session_frequency" id="session_frequency_monthly" value="monthly">
-                    <label for="session_frequency_weekly">Weekly</label>
-                    <input type="radio" name="session_frequency" id="session_frequency_weekly">
+                    <div>
+                        <label for="session_frequency_once">Once</label>
+                        <input type="radio" name="session_frequency" id="session_frequency_once" value="once">
+                    </div>
+                    <div>
+                        <label for="session_frequency_monthly">Monthly</label>
+                        <input type="radio" name="session_frequency" id="session_frequency_monthly" value="monthly">
+                    </div>
+                    <div>
+                        <label for="session_frequency_weekly">Weekly</label>
+                        <input type="radio" name="session_frequency" id="session_frequency_weekly">
+                    </div>
+
 
 
 
@@ -99,7 +106,7 @@
                 </select>
             </div>
             <div>
-                <input type="submit" value="Create" class="btn primary-btn">
+                <input type="submit" value="Create" class="btn tertiary-btn">
             </div>
         </form>
     </div>

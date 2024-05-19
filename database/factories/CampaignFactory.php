@@ -28,7 +28,7 @@ class CampaignFactory extends Factory
             'language' => $this->faker->randomElement(['en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'zh', 'ja', 'ko']),
             'searching_for_players' => $this->faker->boolean(),
             'discord_server_tag' => $this->faker->regexify('/^.{3,32}#[0-9]{4}$/'),
-            'excerpt' => $this->faker->paragraph(2),
+            'excerpt' => $this->faker->paragraph(6),
             'body' => $this->faker->paragraph(10),
         ];
     }

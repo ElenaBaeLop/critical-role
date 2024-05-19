@@ -13,8 +13,8 @@
     max-width: 400px;
     padding: 20px;
     border-radius: 10px;
-    background: #F9EBC4  url("/images/Fondo_4.png");
-    color: #778B94;
+    background: #333333;
+    color: #F9EBC4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .form-title{
@@ -27,8 +27,8 @@
     margin: 10px 0;
     border: none;
     border-radius: 5px;
-    background: #778B94 url("/images/Fondo_3.png");
-    color: #F9EBC4;
+    background: #778B94 url("/images/Fondo_4.png");
+    color: #636363;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -50,7 +50,7 @@
     padding: 10px;
 }
 .error-input {
-    color: white;
+    color: #bd3535;
     margin-top: 5px;
     font-size: 14px;
     font-weight: bold;

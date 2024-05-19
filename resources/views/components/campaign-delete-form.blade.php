@@ -1,6 +1,8 @@
-<form id="deleteForm" action="/campaigns/{{$campaign->slug}}" method="post">
+<div class="btn tertiary-btn">
+    <form id="deleteFormCampaign" action="/campaigns/{{$campaign->slug}}" method="post">
     @csrf
     @method('delete')
-</form>
-<button id="deleteBtn" class="">Delete</button>
+    </form>
+    <button id="deleteBtnCampaign" class="">Delete</button>
+</div>
 <x-confirm-delete />

@@ -1,4 +1,9 @@
+html{
+
+}
 body{
+    display: flex;
+    flex-direction: column;
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
     background-color: white;
@@ -9,7 +14,6 @@ body{
     cursor: pointer;
     box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, .2);
     width: 155px;
-
     padding: 17px;
     border: none;
     border-radius: 30px;
@@ -26,10 +30,39 @@ body{
 
 }
 .secondary-btn{
-    background:#D5732A;
+    background:#778B94;
     color: #F9EBC4;
     transition: all 0.25s ease-out;
     width: 90px;
+}
+.tertiary-btn{
+    background:#333333;
+    transition: all 0.25s ease-out;
+    color: #F9EBC4;
+}
+.icon-btn-ok{
+    background: none;
+    border: none;
+    color: darkolivegreen;
+    font-size: 20px;
+    margin: 0 10px;
+}
+.icon-btn-ok:hover{
+    position: relative;
+    top: -3px;
+    box-shadow: -6px 14px 12px 2px rgba(90, 90, 90, .12);
+}
+.icon-btn-ko{
+    background: none;
+    border: none;
+    color: darkred;
+    font-size: 20px;
+    margin: 0 10px;
+}
+.icon-btn-ko:hover{
+    position: relative;
+    top: -3px;
+    box-shadow: -6px 14px 12px 2px rgba(90, 90, 90, .12);
 }
 
 .primary-btn:hover {
@@ -38,6 +71,11 @@ body{
     box-shadow: -6px 14px 12px 2px rgba(90, 90, 90, .12);
 }
 .secondary-btn:hover {
+    position: relative;
+    top: -3px;
+    box-shadow: -6px 14px 12px 2px rgba(90, 90, 90, .12);
+}
+.tertiary-btn:hover {
     position: relative;
     top: -3px;
     box-shadow: -6px 14px 12px 2px rgba(90, 90, 90, .12);
@@ -55,7 +93,7 @@ body{
     font-size: 30px;
 }
 .secondary-title{
-    color: #D5732A;
+    color:#778B94;
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
@@ -73,7 +111,7 @@ body{
 }
 .tiny-text a{
     text-decoration: none;
-    color: #D5732A;
+    color: #D22636;
 }
 p{
     line-height: 30px;

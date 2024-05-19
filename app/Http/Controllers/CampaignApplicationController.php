@@ -20,19 +20,16 @@ class CampaignApplicationController extends Controller
      * @param  Campaign  $campaign
      * @return [type] Redirect to campaigns.show view
      */
-    public function store(Campaign $campaign)
+    public function store(Request $request,Campaign $campaign)
     {
         request()->validate([
             'body' => 'required'
         ]);
 
+        $userId = $request->user()->id;
         // Si el usuario ya ha aplicado a la campaña, no se puede aplicar de nuevo
-        // Inicializar la consulta para las campañas
-        $query = Campaign::query();
-        $query->whereHas('applications', function($query){
-            $query->where('user_id', request()->user()->id);
-        });
-        if($query->exists()){
+        $hasApplied = $campaign->applications()->where('user_id', $userId)->exists();
+        if($hasApplied){
             return back()->with('error', 'You have already applied to this campaign!');
         }
 

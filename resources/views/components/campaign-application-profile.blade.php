@@ -18,7 +18,7 @@
             @csrf
             @method('DELETE')
         </form>
-        <button id="deleteBtn" class="">Delete</button>
+        <button id="deleteBtn" class="icon-btn-ko"><i class="fa-solid fa-xmark"></i></button>
     @endif
 </article>
 <x-confirm-delete />

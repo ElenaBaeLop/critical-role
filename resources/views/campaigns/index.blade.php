@@ -2,6 +2,19 @@
     <x-header />
     <link rel="stylesheet" href="/css/campaigns.css">
     <section class="search">
+        <div class="facts-wrapper">
+            <div class="facts-img-wrapper">
+                <img class="facts-img" src="/images/Fondo_Dragon.png" alt="Image of a dragon fighting a dwarf">
+            </div>
+            <div class="facts-text-wrapper">
+                <div class="did-you-know">
+                    <h4>What is a campaign?</h4>
+                    <p>A campaign is a series of sessions where a group of players and a game master play a role-playing game. The sessions are usually connected by a story and the characters evolve as the story progresses.</p>
+                    <p>In a campaign, players create characters that embark on adventures, face challenges, and make decisions that influence the course of the story. The game master, or GM, acts as the storyteller and referee, describing the world, controlling non-player characters, and adjudicating the rules.</p>
+                    <p>The beauty of a campaign lies in its collaborative storytelling. Players contribute to the unfolding narrative through their characters' actions, dialogues, and decisions. This collaborative element makes each campaign unique, with outcomes shaped by the collective creativity and choices of the group.</p>
+                </div>
+            </div>
+        </div>
         <div class="search-wrapper">
             <h2>Search campaigns</h2>
             <form action="/join-campaign" method="GET" id="search_campaign_form">
@@ -77,7 +90,7 @@
                     <label for="">Searching for new players:</label>
                     <input type="checkbox" name="searching_for_players" value="1">
                 </div>
-                <input type="submit" value="Search" class="btn primary-btn">
+                <input type="submit" value="Search" class="btn tertiary-btn">
             </form>
 
             <div id="listado_categorias">
@@ -96,22 +109,37 @@
             @if($campaigns->count())
                 @foreach($campaigns as $campaign)
                     <div class="campaign">
+                        <div class="campaign-img-wrapper">
+                            <img class="campaign-img" src="/images/@php
+                                $firstWord = explode(' ', $campaign->category->name)[0]; // Obtener la primera palabra
+
+                                // Verificar si la primera palabra contiene ":"
+                                if (strpos($firstWord, ':') !== false) {
+                                    $parts = explode(':', $firstWord); // Dividir la primera palabra por ":"
+                                    echo $parts[0]; // Imprimir la primera parte
+                                } else {
+                                    echo $firstWord; // Imprimir la primera palabra completa
+                                }
+                            @endphp_logo.png" alt="Image of the campaign">
+                        </div>
                         <div class="campaign-info">
                             <a class="title secondary-title" href="/campaigns/{{ $campaign->slug }}">{{ $campaign->name }}</a>
                             <p class="tiny-text">{{ $campaign->category->name }}</p>
-                            <p>{{ $campaign->excerpt }}</p>
+                            <p class="campaign-excerpt">{{ $campaign->excerpt }}</p>
                             <a class="tiny-text" href="/campaigns/{{ $campaign->slug }}">Read more...</a>
+                            <p class="campaign-extrainfo tiny-text">
+                                Created
+                                <time>{{ $campaign->created_at->format('F j, Y') }}</time>
+                                by <a href="/profile/{{ $campaign->author->username }}">{{ $campaign->author->username }}</a>
+                            </p>
+                            <!--
+                            {{ $campaign->name }}/////
+                            {{ $campaign->language }}/?????/////
+                            {{ $campaign->session_frequency }}/////////
+                            {{ $campaign->category->name }}///!!!!!///
+                            {{ $campaign->searching_for_players }}
+                            <span>------------------</span>-->
                         </div>
-                        <p class="campaign-extrainfo tiny-text">
-                            Created
-                            <time>{{ $campaign->created_at->format('F j, Y') }}</time>
-                            by <a href="/profile/{{ $campaign->author->username }}">{{ $campaign->author->username }}</a>
-                        </p>
-                        {{ $campaign->language }}/?????/////
-                        {{ $campaign->session_frequency }}/////////
-                        {{ $campaign->category->name }}///!!!!!///
-                        {{ $campaign->searching_for_players }}
-                        <span>------------------</span>
                     </div>
                 @endforeach
 

@@ -6,8 +6,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
     /**
@@ -48,5 +50,12 @@ class User extends Authenticatable
     public function applications()
     {
         return $this->hasMany(Application::class);
+    }
+    public function canAccessPanel(Panel $panel): bool
+    {
+        // Obtener el usuario actualmente autenticado
+        $user = User::find(auth()->id());
+
+        return $user && $user->email === 'baena.lopez.elena@gmail.com';
     }
 }

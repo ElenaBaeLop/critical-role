@@ -1,34 +1,32 @@
-<article class="flex space-x-4">
-    <div class="flex-shrink-0">
-        <img src="https://i.pravatar.cc/60?u={{ $application->user_id }}" alt="" width="60" height="60" class="rounded-xl">
-    </div>
-
-    <div>
-        <header class="mb-4">
+<article class="application">
+    <div class="text-application-wrapper">
+        <header class="header-post">
             <a href="/profile/{{ $application->author->username }}" class="">{{ $application->author->username }}</a>
 
-            <p class="text-xs">
+            <p class="tiny-text">
                 Posted
                 <time>{{ $application->created_at->format('F j, Y, g:i a') }}</time>
             </p>
         </header>
 
-        <p>
+        <p class="application-body">
             {{ $application->body }}
         </p>
     </div>
-    @if($application->user_id == auth()->id() || $application->campaign->user_id == auth()->id() )
-        <form id="deleteForm" method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
-            @csrf
-            @method('DELETE')
-        </form>
-        <button id="deleteBtn" class="">Delete</button>
-    @endif
-    @if($application->campaign->user_id == auth()->id() )
-        <form method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/accept">
-            @csrf
-            <input type="submit" value="Accept" class="">
-        </form>
-    @endif
+    <div class="btns-wrapper">
+        @if($application->user_id == auth()->id() || $application->campaign->user_id == auth()->id() )
+            <form id="deleteForm" method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
+                @csrf
+                @method('DELETE')
+            </form>
+            <button id="deleteBtn" class="icon-btn-ko"><i class="fa-solid fa-xmark"></i></button>
+        @endif
+        @if($application->campaign->user_id == auth()->id() )
+            <form method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/accept">
+                @csrf
+                <button type="submit"><i class="fa-solid fa-check icon-btn-ok"></i></button>
+            </form>
+        @endif
+    </div>
 </article>
 <x-confirm-delete />
