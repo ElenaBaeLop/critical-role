@@ -1,6 +1,6 @@
 <x-layout>
     <link rel="stylesheet" href="/css/notification.css">
-    <div class="notification-wrapper">
+    <section class="notification-wrapper">
         <div class="div-info">
             <h1 class="title">Notifications</h1>
             <form action="/profile/{{ Auth::user()->username }}/notifications" method="POST">
@@ -33,5 +33,5 @@
                 <p class="notification-text">No notifications</p>
             @endif
         </div>
-    </div>
+    </section>
 </x-layout>
