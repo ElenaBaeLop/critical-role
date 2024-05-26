@@ -1,5 +1,4 @@
 <x-layout>
-    <x-header />
     <link rel="stylesheet" href="/css/create-campaign.css">
     <div class="create-campaign-wrapper">
         <form action="/create-campaign" method="post" class="create-campaign">
@@ -110,7 +109,6 @@
             </div>
         </form>
     </div>
-    <x-footer />
 </x-layout>
 
 <script src="{{ asset('js/session-frequency-weekly-dropdown.js') }}"></script>

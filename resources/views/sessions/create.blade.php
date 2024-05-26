@@ -1,5 +1,4 @@
 <x-layout>
-    <x-header />
     <link rel="stylesheet" href="/css/login-register.css">
     <div class="form-wrapper">
         <section class= "form">
@@ -27,5 +26,4 @@
             </form>
         </section>
     </div>
-    <x-footer />
 </x-layout>

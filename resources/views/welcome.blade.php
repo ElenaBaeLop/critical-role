@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="/css/welcome.css">
 <x-layout>
-    <x-header />
     <section class="welcome-section">
         <div class="fondo-wrapper">
             <img class="fondo" src="/images/fondo.png" alt="Dungeons and Dragons logo">
@@ -36,5 +35,4 @@
             <img src="/images/Logo.png" alt="Critical Role logo" class="logo">
         </article>
     </section>
-    <x-footer />
 </x-layout>

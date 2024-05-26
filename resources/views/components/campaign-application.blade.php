@@ -15,11 +15,11 @@
     </div>
     <div class="btns-wrapper">
         @if($application->user_id == auth()->id() || $application->campaign->user_id == auth()->id() )
-            <form id="deleteForm" method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
+            <form id="{{$application->id}}" method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
                 @csrf
                 @method('DELETE')
             </form>
-            <button id="deleteBtn" class="icon-btn-ko"><i class="fa-solid fa-xmark"></i></button>
+            <button class="icon-btn-ko deleteBtn" data-target="{{$application->id}}"><i class="fa-solid fa-xmark"></i></button>
         @endif
         @if($application->campaign->user_id == auth()->id() )
             <form method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/accept">
@@ -29,4 +29,4 @@
         @endif
     </div>
 </article>
-<x-confirm-delete />
+

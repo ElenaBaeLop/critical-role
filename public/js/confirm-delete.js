@@ -1,26 +1,18 @@
-$("#deleteBtn").click(function(){
-    $("#myModal").show();
-});
+$(document).ready(function() {
+    $(".close, #cancelDeleteBtn").click(function () {
+        $(".modal").hide();
+    });
 
-$(".close, #cancelDeleteBtn").click(function(){
-    $("#myModal").hide();
-});
+// Escuchar clic en los botones de eliminación
+    $(".deleteBtn").click(function () {
+        var formId = $(this).data('target'); // Obtener el ID del formulario correspondiente
+        $(".modal").show(); // Mostrar el modal
+        $(".modal").attr('data-form-id', formId); // Almacenar el ID del formulario en el atributo data-form-id del modal
+    });
 
-$("#confirmDeleteBtn").click(function(){
-    $("#deleteForm").submit();
-    $("#myModal").hide();
-});
-
-
-$("#deleteBtnCampaign").click(function(){
-    $("#myModal").show();
-});
-
-$(".close, #cancelDeleteBtn").click(function(){
-    $("#myModal").hide();
-});
-
-$("#confirmDeleteBtn").click(function(){
-    $("#deleteFormCampaign").submit();
-    $("#myModal").hide();
+// Escuchar clic en "Yes" en el modal
+    $("#confirmDeleteBtn").click(function () {
+        var formId = $(".modal").attr('data-form-id'); // Obtener el ID del formulario almacenado en el modal
+        $("#" + formId).submit(); // Enviar el formulario correspondiente
+    });
 });

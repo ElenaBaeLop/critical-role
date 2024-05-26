@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+
 }
 .campaign-profile-btns {
     display: flex;
@@ -75,7 +76,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: #F9EBC4;
+    background-color: #f6efdd;
     border-radius: 5px;
     margin: 10px 0;
     padding: 10px;
@@ -89,6 +90,9 @@
     flex-direction: column;
     width: 80%;
 }
+.text-application-wrapper a:hover{
+    color:#d55e6b ;
+}
 .application-body{
     /* white-space: pre-wrap;  Preserva los saltos de línea y los espacios */
     overflow-wrap: break-word; /* Permite que las palabras largas se rompan y ajusten al contenedor */
@@ -101,4 +105,15 @@
     align-items: start;
     justify-content: end;
     width: 20%;
+}
+@media (max-width: 768px) {
+    .campaign{
+        width: 100%;
+    }
+    .campaign-profile-btns {
+        width: 100%;
+    }
+    .applications-wrapper{
+        width: 100%;
+    }
 }

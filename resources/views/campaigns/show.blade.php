@@ -1,5 +1,4 @@
 <x-layout>
-    <x-header />
     <link rel="stylesheet" href="/css/profile-campaign.css">
     <div class="campaign-profile-wrapper">
         @auth
@@ -38,5 +37,4 @@
             </div>
         </section>
     </div>
-    <x-footer />
 </x-layout>

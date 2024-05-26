@@ -19,12 +19,13 @@
 </head>
 
 <body>
+    <x-header />
 
+    {{ $slot }}
 
-{{ $slot }}
-
-
+    <x-footer />
+</body>
 <x-success />
 <x-error />
+<x-confirm-delete />
 <script src="/js/success-message.js"></script>
-</body>

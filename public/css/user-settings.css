@@ -1,0 +1,84 @@
+.edit-user-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+.edit-user-second-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.info-title{
+    color: #778B94;
+    font-size: 15px;
+    margin: 10px 0;
+}
+/*---------------------------------*/
+.form-edit {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.form-edit input[type="text"]  {
+    margin: 10px 0;
+    padding: 6px;
+    border: 1px solid #778B94;
+    border-radius: 5px;
+    width: 350px;
+}
+.form-edit input[type="submit"]  {
+    background-color: #333333;
+    margin: 10px 0;
+    padding: 6px;
+    border-radius: 5px;
+    width: 350px;
+    color: #F9EBC4;
+}
+.form-edit input[type="submit"]:hover  {
+    background-color: #F9EBC4;
+    color: #333333;
+}
+.form-edit textarea {
+    margin: 10px 0;
+    padding: 6px;
+    border: 1px solid #778B94;
+    border-radius: 5px;
+    width: 350px;
+}
+.email-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.password-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.password-wrapper input[type="password"]  {
+    margin: 10px 0;
+    padding: 6px;
+    border: 1px solid #778B94;
+    border-radius: 5px;
+    width: 350px;
+}
+/*---------------------------------*/
+@media (max-width: 768px) {
+    .edit-user-wrapper {
+        width: 100%;
+    }
+    .edit-user-second-wrapper {
+        width: 100%;
+    }
+    .form-edit input[type="text"] {
+        width: 100%;
+    }
+    .form-edit input[type="submit"] {
+        width: 100%;
+    }
+    .form-edit textarea {
+        width: 100%;
+    }
+    .password-wrapper input[type="password"] {
+        width: 100%;
+    }
+}

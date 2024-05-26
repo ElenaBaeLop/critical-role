@@ -1,9 +1,9 @@
-<article class="flex space-x-4">
-    <div>
-        <header class="mb-4">
-            <a href="/campaigns/{{ $application->campaign->slug }}" class="">{{ $application->campaign->name }}</a>
+<article class="application-profile">
+    <div class="application-info">
+        <header class="info-title">
+            <a href="/campaigns/{{ $application->campaign->slug }}" class="campaign-title">{{ $application->campaign->name }}</a>
 
-            <p class="text-xs">
+            <p class="tiny-text">
                 Posted
                 <time>{{ $application->created_at->format('F j, Y, g:i a') }}</time>
             </p>
@@ -14,12 +14,13 @@
         </p>
     </div>
     @if($application->user_id == auth()->id() || $application->campaign->user_id == auth()->id() )
-        <form id="deleteForm" method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
-            @csrf
-            @method('DELETE')
-        </form>
-        <button id="deleteBtn" class="icon-btn-ko"><i class="fa-solid fa-xmark"></i></button>
+        <div class="application-btns">
+            <form id="{{$application->id}}" method="POST" action="/campaigns/{{$application->campaign->slug}}/applications/{{$application->id}}/delete">
+                @csrf
+                @method('DELETE')
+            </form>
+            <button class="icon-btn-ko deleteBtn" data-target="{{$application->id}}"><i class="fa-solid fa-xmark"></i></button>
+        </div>
     @endif
 </article>
-<x-confirm-delete />
 

@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('name');
             //$table->boolean('admin')->nullable();
             $table->string('discord_tag')->unique()->nullable();
-            $table->string('game_likes')->nullable();
-            $table->string('biography')->nullable();
+            $table->text('game_likes')->nullable();
+            $table->text('biography')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

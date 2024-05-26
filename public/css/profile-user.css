@@ -1,0 +1,135 @@
+.profile-user-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.personal-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+.activities-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/*---------------------------------*/
+.options-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+.options-wrapper a{
+    text-decoration: underline;
+    color: #778B94;
+    margin: 0 10px;
+}
+.details-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+.info-title{
+    color: #778B94;
+    font-size: 15px;
+    margin: 10px 0;
+}
+.info-text{
+    color: #454545;
+    font-size: 15px;
+    margin: 10px 0;
+}
+/*---------------------------------*/
+
+.campaings-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.campaign{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f6f5f1;
+    border-radius: 5px;
+    width: 450px;
+}
+.campaign-info{
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+}
+.campaign-title{
+    color: #454545;
+    font-size: 15px;
+}
+.campaign-title:hover{
+    color: #778B94;
+}
+.profile-btn{
+    padding: 5px;
+    margin: 2px;
+}
+.profile-btn input{
+    background-color: #F9EBC4;
+}
+.btns-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 10px;
+}
+.section-title{
+    color:#778B94;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+/*---------------------------------*/
+.applications-profile-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+.application-profile{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f6efdd;
+    border-radius: 5px;
+}
+.application-info{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.application-btns{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    align-items: center;
+}
+
+/*-----------------------------------------------------*/
+@media (max-width: 768px) {
+    .campaign {
+        width: 100%;
+    }
+    /*
+    .personal-info-wrapper{
+        height: auto;
+    }
+    .profile-user-wrapper{
+        height: 100%;
+    }*/
+}
